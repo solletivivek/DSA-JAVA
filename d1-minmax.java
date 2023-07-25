@@ -15,8 +15,6 @@ public class one {
             min=arr[i];
         }
 
-// sd
-
     }
     System.out.println(min);
     }
