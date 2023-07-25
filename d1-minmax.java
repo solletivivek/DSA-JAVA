@@ -14,6 +14,9 @@ public class one {
         if(arr[i]<min){
             min=arr[i];
         }
+
+// sd
+
     }
     System.out.println(min);
     }
