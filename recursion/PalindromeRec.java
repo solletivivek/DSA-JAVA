@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -6,24 +5,42 @@ import java.util.Scanner;
  */
 public class PalindromeRec {
 
-    public static boolean fun(int[] arr,int l,int n){
-        if(l>=arr.length/2) return true;
-        if(arr[l]!=arr[arr.length-l-1]) return false;
-        return fun(arr,l+1,n);
+    public static boolean fun(String str,int l){
+        if(l >str.length()/2) return true;
+        if(str.charAt(l)!=str.charAt(str.length()-l-1)) return false;
+        return fun(str, l+1);
     }
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int [] arr = new int[n];
-        for(int i=0;i<n;i++){
-            arr[i]=sc.nextInt();
+
+    public static String reveStr(String str){
+        if (str.isEmpty()) {
+            return str;
         }
-        System.out.println(Arrays.toString(arr));
-        boolean isPanldrome=fun(arr, 0, n);
-        if (isPanldrome) {
-            System.out.println("yes");
-        }else System.out.println("NO");
+        return reveStr(str.substring(1))+str.charAt(0);
+    }
 
-
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       String str = sc.nextLine();
+       System.out.println(reveStr(str));
+       boolean isNew = fun(str, 0);
+       if (isNew){
+        System.out.println("yes");
+       }else{
+        System.out.println("no");
+       }
     }
 }
+
+// // Full Trace Summary:
+
+// // reverseString("madam") -> reverseString("adam") + 'm'
+// // reverseString("adam") -> reverseString("dam") + 'a'
+// // reverseString("dam") -> reverseString("am") + 'd'
+// // reverseString("am") -> reverseString("m") + 'a'
+// // reverseString("m") -> reverseString("") + 'm'
+// // reverseString("") -> "" (base case)
+// // Unwind: "" + 'm' -> "m"
+// // Unwind: "m" + 'a' -> "ma"
+// // Unwind: "ma" + 'd' -> "mad"
+// // Unwind: "mad" + 'a' -> "mada"
+// // Unwind: "mada" + 'm' -> "madam"
