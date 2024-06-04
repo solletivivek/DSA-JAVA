@@ -1,0 +1,20 @@
+CD:
+cd Desktop.
+DIR:
+dir Desktop.
+MKDIR:
+mkdir My Files.
+RMDIR:
+rmdir My Files
+COPY:
+copy te.text
+MOVE:
+move te.text
+DEL:
+del te.text
+TYPE:
+type te.text
+CLS:
+cls
+EXIT:
+exit

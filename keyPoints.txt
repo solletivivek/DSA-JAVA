@@ -1,0 +1,14 @@
+10^8  takes  1 sec  (roughly)
+
+example
+
+if 10^8 takes 1 sec then,
+   10^10 takes 100 sec
+
+   how ?
+
+   10^8 = 1 sec
+   1 operation takes 1/10^8 sec
+
+   then,
+   10^10 takes 1/10^8 * 10^10 = 100 sec
