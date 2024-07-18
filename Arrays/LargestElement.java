@@ -13,7 +13,6 @@ public class LargestElement {
         return arr[arr.length-1];
     }
 
-
     public static int rec(int arr[]){               //recursive approach ( optimal approch )
         int max=arr[0];
         for(int i = 0 ; i<arr.length;i++){
